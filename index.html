@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../node_modules/kinetic/kinetic.js"></script>
+</head>
+<body>
+    <div id="board"></div>
+    <script type="text/javascript">
+        function initStage(){
+            var stage = new Kinetic.Stage({
+                container : "board",
+                width: 800,
+                height: 600
+            })
+            var backgroundLayer = new Kinetic.Layer();
+            var background = new Kinetic.Rect({
+                fill: 'black',
+                x : 0,
+                y : 0,
+                width : 800,
+                height : 600
+            });
+            backgroundLayer.add(background);
+            stage.add(backgroundLayer);
+        }
+        initStage();
+    </script>
+</body>
+</html>
